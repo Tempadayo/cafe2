@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* CSSのリセット（消さないでください） */
 html, body,
 ul, ol, li,
 h1, h2, h3, h4, h5, h6, p,
@@ -16,8 +15,10 @@ body {
 li {
   list-style: none;
 }
+.change{
+  display:none;
+}
 
-/* ここからCSSを記述してください */
 header{
   background:#26d0c9;
   height:90px;
@@ -53,9 +54,6 @@ header li{
   padding-bottom:15px;
   margin-bottom:50px;
   
-}
-.main-wrapper{
-  height:500px;
 }
 .icon ul{
   display:flex;
@@ -100,4 +98,64 @@ footer ul{
 }
 footer li{
   padding-bottom:20px;
+}
+
+@media(max-width:1000px){
+header {
+  min-width:auto;
+}
+header li{
+  font-size:20px;
+}
+.change{
+  display:block;
+}
+.main-wrapper{
+  margin:0 auto;
+}
+.main h1{
+  font-size:100px;
+}
+.main h2{
+  font-size:60px;
+}
+.icon{
+  gap:2rem;
+}
+.icon ul{
+  flex-wrap:wrap;
+}
+header p{
+  font-size:36px;
+}
+.container h3{
+  font-size:32px;
+}
+.icon p{
+  font-size:24px;
+}
+}
+
+@media(max-width:670px){
+header{
+  min-width:auto;
+}
+.main-wrapper{
+  width:100%;
+}
+.change{
+  display:block;
+}
+.main h1{
+  font-size:80px;
+}
+.main h2{
+  width:36px;
+}
+.icon ul{
+  width:100%;
+}
+li p{
+  font-size:10px;
+}
 }
